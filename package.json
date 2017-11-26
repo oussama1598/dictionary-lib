@@ -1,5 +1,5 @@
 {
-  "name": "camdict-api",
+  "name": "dictionary-lib",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
