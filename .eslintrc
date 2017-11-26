@@ -1,0 +1,12 @@
+{
+  "parser": "babel-eslint",
+  "extends": "standard",
+  "env": {
+    "es6": true
+  },
+  "globals": {},
+  "plugins": [],
+  "rules": {
+    "comma-dangle": [2, "never"]
+  }
+}
