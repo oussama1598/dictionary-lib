@@ -1,3 +1,4 @@
-import { fetchWord, translateWord } from './lib/camdict'
+import camdict from './lib/camdict'
+import * as syndict from './lib/syndict'
 
-translateWord('edible', 'en-es').then(data => console.log(data))
+syndict.fetchWord('oxford').then(data => console.log(data))
