@@ -30,17 +30,12 @@ export function fetchWord (word) {
   return new Promise((resolve, reject) => {
     x(url, 'div[data-tab="ds-british"] .entry-body', {
       type: '.pos',
-      prononciations: {
-        us: x('.pos-header span[pron-region="US"]', {
-          prononciation: '.pron',
-          audio: '.audio_play_button@data-src-mp3'
-        }),
-        uk: x('.pos-header span[pron-region="UK"]', {
-          prononciation: '.pron',
-          audio: '.audio_play_button@data-src-mp3'
-        })
-      },
-      meanings: x('div[data-tab="ds-british"] .def-block', [{
+      prononciations: x('div[data-tab="ds-british"] .pos-header:first-child .pron-info', [{
+        region: '.region',
+        prononciation: '.pron',
+        audio: '.audio_play_button@data-src-mp3'
+      }]).limit(2),
+      meanings: x('div[data-tab="ds-british"] .sense-block .def-block', [{
         meaning: '.def | trim | column',
         examples: ['.def-body .examp | trim | column']
       }])

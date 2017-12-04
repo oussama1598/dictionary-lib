@@ -1,4 +1,4 @@
-import camdict from './lib/camdict'
+import * as camdict from './lib/camdict'
 import * as syndict from './lib/syndict'
 
-syndict.fetchWord('oxford').then(data => console.log(data))
+camdict.fetchWord('rewind').then(data => console.log(data))
